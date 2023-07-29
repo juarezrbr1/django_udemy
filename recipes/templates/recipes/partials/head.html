@@ -7,21 +7,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/fontawesome.min.css"
         integrity="sha512-cHxvm20nkjOUySu7jdwiUxgGy11vuVPE9YeK89geLMLMMEOcKFyS2i+8wo0FOwyQO/bL8Bvq1KMsqK4bbOsPnA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/brands.min.css"
         integrity="sha512-L+sMmtHht2t5phORf0xXFdTC0rSlML1XcraLTrABli/0MMMylsJi3XA23ReVQkZ7jLkOEIMicWGItyK4CAt2Xw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/solid.min.css"
         integrity="sha512-bdTSJB23zykBjGDvyuZUrLhHD0Rfre0jxTd0/jpTbV7sZL8DCth/88aHX0bq2RV8HK3zx5Qj6r2rRU/Otsjk+g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&display=swap" rel="stylesheet">
-
     <title>Recipes</title>
-
     <style>
         :root {
             --color-primary: #269fe6;
@@ -159,6 +154,34 @@
         .search-form:focus-within .search-button {
             color: var(--color-primary);
         }
-    </style>
 
+        .main-content {
+            padding-top: 0;
+        }
+
+        .main-content-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: var(--spacing-gutter-large);
+        }
+
+        .recipe {
+            background: var(--color-white);
+            box-shadow: -5px 5px 10px rgba(0, 0, 0, .2);
+            transform: scale(1);
+            transition: all 300ms ease-in-out;
+        }
+
+        .recipe img {
+            max-width: 100%;
+        }
+
+        .recipe-list-item {
+            max-width: 64rem;
+        }
+
+        .recipe-list-item:hover {
+            transform: scale(1.02);
+        }
+    </style>
 </head>
