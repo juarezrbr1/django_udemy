@@ -1,7 +1,6 @@
 from django.shortcuts import render, get_object_or_404, get_list_or_404
 from utils.recipes.factory import make_recipe
 from django.http import Http404
-
 from .models import Recipe
 
 
@@ -12,7 +11,6 @@ def home(request):
     return render(request, 'recipes/pages/home.html', context={
         'recipes': recipes,
     })
-
 
 def category(request, category_id):
     recipes = get_list_or_404(
