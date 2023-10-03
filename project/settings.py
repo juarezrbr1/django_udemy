@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # A gente tem apps também
     'recipes',
-    'authors'
+    'authors',
 ]
 
 MIDDLEWARE = [
@@ -117,7 +117,7 @@ TIME_ZONE = 'America/Sao_Paulo'
 
 USE_I18N = True
 
-USE_L10N = True
+# USE_L10N = True
 
 USE_TZ = True
 
