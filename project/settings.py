@@ -30,6 +30,12 @@ DEBUG = True if os.environ.get('DEBUG') == '1' else False
 
 ALLOWED_HOSTS: list[str] = []
 
+INTERNAL_IPS = [
+    # ...
+    "127.0.0.1",
+    # ...
+]
+
 
 # Application definition
 
@@ -43,6 +49,7 @@ INSTALLED_APPS = [
     # A gente tem apps também
     'recipes',
     'authors',
+    'debug_toolbar',
 ]
 
 MIDDLEWARE = [
@@ -53,6 +60,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'project.urls'
