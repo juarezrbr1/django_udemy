@@ -49,7 +49,6 @@ INSTALLED_APPS = [
     'recipes',
     'authors',
     'debug_toolbar',
-    'dbbackup',
 ]
 
 MIDDLEWARE = [
@@ -96,9 +95,6 @@ DATABASES = {
     }
 }
 
-# Configurações específicas para o django-dbbackup
-DBBACKUP_STORAGE = 'django.core.files.storage.FileSystemStorage'
-DBBACKUP_STORAGE_OPTIONS = {'location': 'C:/Users/Usuário/Desktop'}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
