@@ -1,9 +1,9 @@
-from typing import Any
+from collections import defaultdict
+
 from django import forms
+from django.core.exceptions import ValidationError
 from recipes.models import Recipe
 from utils.django_forms import add_attr
-from collections import defaultdict
-from django.core.exceptions import ValidationError
 from utils.strings import is_positive_number
 
 
@@ -17,9 +17,9 @@ class AuthorRecipeForm(forms.ModelForm):
 
     class Meta:
         model = Recipe
-        fields = ('title', 'description', 'preparation_time',
-                  'preparation_time_unit', 'servings',
-                  'servings_unit', 'preparation_steps', 'cover')
+        fields = 'title', 'description', 'preparation_time', \
+            'preparation_time_unit', 'servings', 'servings_unit', \
+            'preparation_steps', 'cover'
         widgets = {
             'cover': forms.FileInput(
                 attrs={
@@ -28,15 +28,15 @@ class AuthorRecipeForm(forms.ModelForm):
             ),
             'servings_unit': forms.Select(
                 choices=(
-                    ("Porções", 'Porções'),
-                    ("Pedaços", 'Pedaços'),
-                    ("Pessoas", 'Pessoas'),
+                    ('Porções', 'Porções'),
+                    ('Pedaços', 'Pedaços'),
+                    ('Pessoas', 'Pessoas'),
                 ),
             ),
             'preparation_time_unit': forms.Select(
                 choices=(
                     ('Minutos', 'Minutos'),
-                    ('Horas', 'Horas')
+                    ('Horas', 'Horas'),
                 ),
             ),
         }
