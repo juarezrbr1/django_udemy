@@ -13,7 +13,7 @@ from ..serializers import RecipeSerializer, TagSerializer
 class RecipeAPIv2Pagination(PageNumberPagination):
     page_size = 2
 
-class RecipeAPIv2List(APIView):
+class RecipeAPIv2List(ListCreateAPIView):
     queryset = Recipe.objects.get_published()
     serializer_class = RecipeSerializer
     pagination_class = RecipeAPIv2Pagination
